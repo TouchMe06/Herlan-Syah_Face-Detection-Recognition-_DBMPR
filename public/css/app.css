@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.background-img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+/* Background Card Transparan */
+.bg-glass {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Label Nama Header Untuk Register dan Index Kepuasan */
+.label-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.label-half-out {
+    position: relative;
+    background: linear-gradient(to right, #198754, #55c05b);
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.label-half-out::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -27px;
+    width: 100%;
+    height: 100%;
+    background-color: #198754;
+    z-index: -1;
+    border-radius: 0.25rem 0 0 0;
+}
+
+.label-half-out::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -27px;
+    width: 11.2px;
+    height: 20px;
+    background-color: #107445;
+    border-radius: 0 0 0 10px;
+    z-index: -2;
+}
+
+/* ->->->-> Dashboard Admin <-<-<-<- */
+/* Style Tables*/
+.pagination .page-item.active .page-link {
+    color: white;
+}
+
+.dataTables_length select {
+    background: none;
+    cursor: pointer;
+}
+
+.dataTables_length select:hover {
+    border: 1px solid blue;
+}
+
+.breadcrumb-item a:hover {
+    color: #e3e3e3 !important;
+}
+
+.pagination .page-item.active .page-link {
+    border-color: #55c05b;
+    background: linear-gradient(to bottom, #55c05b, #198754);
+}
+
+/* Custom Warna Button */
+.btn-custom {
+    background: linear-gradient(to bottom, #55c05b, #198754);
+    color: #ffffff;
+}

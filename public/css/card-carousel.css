@@ -1,0 +1,98 @@
+#myCarousel {
+    margin-top: 10px;
+}
+
+.card {
+    margin-left: 15px;
+    /* height: 400px; */
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    margin: 0;
+}
+
+.card-text {
+    margin: 10px;
+}
+
+.card-title {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.card-footer {
+    border-top: 1px solid #ccc;
+}
+
+.card-footer i {
+    margin-right: 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    margin-top: 120px; /* Sesuaikan dengan setengah tinggi panah */
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left: -10px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(25%) !important;
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-item-prev:not(.carousel-item-end),
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+
+    .carousel-item-next.carousel-item-start,
+    .active.carousel-item-end {
+        transform: translateX(0) !important;
+    }
+
+    .carousel-inner .carousel-item-prev,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+}
